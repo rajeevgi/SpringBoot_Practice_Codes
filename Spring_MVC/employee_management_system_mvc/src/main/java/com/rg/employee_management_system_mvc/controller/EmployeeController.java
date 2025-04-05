@@ -22,6 +22,12 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    // Home Page
+    @GetMapping("/home")
+    public String homepage(){
+        return "index";
+    }
+
     // Get All Employees
     @GetMapping("/listAllEmployees")
     public String getAllEmployees(Model model){
