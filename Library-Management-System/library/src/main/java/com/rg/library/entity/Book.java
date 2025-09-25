@@ -14,6 +14,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +22,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Table(name = "books")
 public class Book {
 
@@ -31,6 +33,7 @@ public class Book {
     @Column(name = "book_name")
     private String title;
 
+    @Column(name = "isbn")
     private String isbn;
     
     @ManyToOne
