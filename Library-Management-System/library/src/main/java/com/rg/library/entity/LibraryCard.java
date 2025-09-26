@@ -2,6 +2,8 @@ package com.rg.library.entity;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,7 +38,8 @@ public class LibraryCard {
     private LocalDate issuDate;
 
     @OneToOne
+    @JsonBackReference
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User users;
+    private User user;
 
 }

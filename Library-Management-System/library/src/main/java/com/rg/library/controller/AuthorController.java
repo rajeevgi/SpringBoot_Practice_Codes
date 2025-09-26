@@ -19,12 +19,12 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @PostMapping
+    @PostMapping("/createAuthor")
     public Author createAuthor(@RequestBody Author author) {
         return authorService.createAuthor(author);
     }
 
-    @GetMapping
+    @GetMapping("/getAllAuthors")
     public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();
     }

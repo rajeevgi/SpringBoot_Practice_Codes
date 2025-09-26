@@ -27,7 +27,7 @@ public class UserService {
         LibraryCard card = LibraryCard.builder()
                 .cardNumber("CARD-" + savedUser.getId())
                 .issuDate(LocalDate.now())
-                .users(savedUser)
+                .user(savedUser)
                 .build();
 
         cardRepository.save(card);
