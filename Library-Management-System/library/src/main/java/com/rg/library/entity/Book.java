@@ -3,6 +3,8 @@ package com.rg.library.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,6 +40,7 @@ public class Book {
     
     @ManyToOne
     @JoinColumn(name = "library_id")
+    @JsonBackReference
     private Library library;
 
 

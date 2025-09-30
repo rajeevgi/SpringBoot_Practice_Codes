@@ -1,5 +1,6 @@
 package com.rg.library.service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -21,20 +22,20 @@ public class BookService {
     private AuthorRepository authorRepository;
 
     // Create Book
-    public Book createBook(Book book){
+    public Book createBook(Book book) {
         return bookRepository.save(book);
     }
 
     // List books
-    public List<Book> getAllbooks(){
+    public List<Book> getAllbooks() {
         return bookRepository.findAll();
     }
 
     // Assign Authors to Books
-    public Book assignAuthors(int bookId, Set<Integer> authorIds){
+    public Book assignAuthors(int bookId, Set<Integer> authorIds) {
         Book book = bookRepository.findById(bookId).orElseThrow();
 
-        Set<Author> authors = Set.copyOf(authorRepository.findAllById(authorIds));
+        Set<Author> authors = new HashSet<>(authorRepository.findAllById(authorIds));
 
         book.setAuthors(authors);
 
@@ -42,7 +43,7 @@ public class BookService {
     }
 
     // Get Authors
-    public Set<Author> getAuthors(int bookId){
+    public Set<Author> getAuthors(int bookId) {
         Book book = bookRepository.findById(bookId).orElseThrow();
 
         return book.getAuthors();
