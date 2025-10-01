@@ -6,7 +6,7 @@ This repository contains multiple Spring Boot projects demonstrating login & reg
 
 ## 📁 Projects
 
-### 🔐 1. Login-And-Registration-Using-SpringJPA/login_and_registration
+### 🔐 1. Login-And-Registration-Using-SpringJPA RestAPI
 
 A basic login and registration system using Spring Boot, Spring Data JPA, and REST APIs.
 
@@ -30,7 +30,7 @@ A basic login and registration system using Spring Boot, Spring Data JPA, and RE
 
 ---
 
-### 🔐 2. Session-based-login&register/session_based_login_and_register
+### 🔐 2. Session-based-login&register RestAPI
 
 A session-based login and registration system with REST APIs using Spring Boot and HTTP session management.
 
@@ -80,7 +80,7 @@ A CRUD-based employee management system using Spring MVC, JSP, and Spring Boot.
 
 ---
 
-### 📋 4. employee_management_system
+### 📋 4. Employee_Management_System
 
 A modern, REST API-based employee management system using Spring Boot and Spring Data JPA.
 
@@ -101,6 +101,32 @@ A modern, REST API-based employee management system using Spring Boot and Spring
 2. Update `application.properties` with your DB config.
 3. Run the application.
 4. Use Postman to test CRUD endpoints (`/employees`).
+
+--- 
+---
+
+### 📋 5. Library_Management_System RestAPI
+
+A modern, REST API-based Library management system using Spring Boot and Spring Data JPA.
+
+**Features:**
+- RESTful CRUD operations for Library , Books, Authors
+- One-to-many -> A Library can have multiple books.
+- Many-to-many -> Books can be written by multiple Authors. 
+- Validations using Spring validations
+- Separation of layers: Controller, Service, Repository
+
+**Technologies Used:**
+- Spring Boot
+- Spring Data JPA, Hibernate, Spring Validations
+- MySQL
+- REST APIs
+
+**How to Run:**
+1. Clone the repository.
+2. Update `application.properties` with your DB config.
+3. Run the application.
+4. Use Postman to test CRUD endpoints (`/api`).
 
 ---
 
